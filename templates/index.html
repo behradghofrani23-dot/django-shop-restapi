@@ -1,0 +1,776 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <title>فروشگاه گیمینگ</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"
+          rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet"
+          href="{% static 'assets/css/fontawesome.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'assets/css/templatemo-lugx-gaming.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'assets/css/owl.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'assets/css/animate.css' %}">
+
+    <link rel="stylesheet"
+          href="{% static 'assets/css/fonts.css' %}">
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= PRELOADER ================= -->
+
+
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header-area header-sticky">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <nav class="main-nav">
+
+                    <!-- Logo -->
+
+                    <a href="/" class="logo">
+
+                        <img src="{% static 'assets/images/logo.png' %}"
+                             alt="لوگو"
+                             style="width: 158px;">
+
+                    </a>
+
+
+                    <!-- Menu -->
+
+                    <ul class="nav">
+
+                        <li>
+                            <a href="/" class="active">
+                                خانه
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/">
+                                فروشگاه
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/">
+                                جزئیات محصول
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/">
+                                تماس با ما
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/">
+                                ورود
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <a class="menu-trigger">
+
+                        <span>منو</span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= BANNER ================= -->
+
+<div class="main-banner">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-6 align-self-center">
+
+                <div class="caption header-text">
+
+                    <h6>
+                        به فروشگاه ما خوش آمدید
+                    </h6>
+
+                    <h2>
+                        بهترین بازی‌ها را پیدا کنید
+                    </h2>
+
+                    <p>
+                        جدیدترین بازی‌ها و محصولات دیجیتال را با بهترین قیمت
+                        از فروشگاه ما تهیه کنید.
+                    </p>
+
+
+                    <div class="search-input">
+
+                        <form id="search" action="/" method="GET">
+
+                            <input type="text"
+                                   placeholder="چیزی تایپ کنید..."
+                                   id="searchText"
+                                   name="searchKeyword">
+
+                            <button type="submit">
+                                جستجو
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 offset-lg-2">
+
+                <div class="right-image">
+
+                    <img src="{% static 'assets/images/banner-image.jpg' %}"
+                         alt="">
+
+                    <span class="price">
+                        30,000
+                    </span>
+
+                    <span class="offer">
+                        -40%
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FEATURES ================= -->
+
+<div class="features">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6">
+
+                <a href="#">
+
+                    <div class="item">
+
+                        <div class="image">
+
+                            <img src="{% static 'assets/images/featured-01.png' %}"
+                                 alt=""
+                                 style="max-width: 44px;">
+
+                        </div>
+
+                        <h4>
+                            ذخیره سازی رایگان
+                        </h4>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <a href="#">
+
+                    <div class="item">
+
+                        <div class="image">
+
+                            <img src="{% static 'assets/images/featured-02.png' %}"
+                                 alt=""
+                                 style="max-width: 44px;">
+
+                        </div>
+
+                        <h4>
+                            کاربران بیشتر
+                        </h4>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <a href="#">
+
+                    <div class="item">
+
+                        <div class="image">
+
+                            <img src="{% static 'assets/images/featured-03.png' %}"
+                                 alt=""
+                                 style="max-width: 44px;">
+
+                        </div>
+
+                        <h4>
+                            پاسخ سریع
+                        </h4>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <a href="#">
+
+                    <div class="item">
+
+                        <div class="image">
+
+                            <img src="{% static 'assets/images/featured-04.png' %}"
+                                 alt=""
+                                 style="max-width: 44px;">
+
+                        </div>
+
+                        <h4>
+                            طراحی آسان
+                        </h4>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TRENDING ================= -->
+
+<div class="section trending">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-6">
+
+                <div class="section-heading">
+
+                    <h6>
+                        پرطرفدار
+                    </h6>
+
+                    <h2>
+                        محصولات پرطرفدار
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="main-button">
+
+                    <a href="/">
+                        مشاهده همه
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            {% for product in trending_products %}
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="item">
+
+                    <div class="thumb">
+
+                        {% if product.image %}
+
+                        <a href="/">
+
+                            <img src="{{ product.image.url }}"
+                                 alt="{{ product.title }}">
+
+                        </a>
+
+                        {% endif %}
+
+
+                        {% if product.discount_price %}
+
+                        <span class="price">
+
+                            <em>
+                                {{ product.price|floatformat:0 }}
+                            </em>
+
+                            {{ product.discount_price|floatformat:0 }}
+
+                        </span>
+
+                        {% else %}
+
+                        <span class="price">
+
+                            {{ product.price|floatformat:0 }}
+
+                        </span>
+
+                        {% endif %}
+
+                    </div>
+
+
+                    <div class="down-content">
+
+                        <span class="category">
+
+                            {{ product.Category }}
+
+                        </span>
+
+                        <h4>
+
+                            {{ product.title }}
+
+                        </h4>
+
+
+                        <a href="/">
+
+                            <i class="fa fa-shopping-bag"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="col-12 text-center">
+
+                <p>
+                    هنوز محصولی ثبت نشده است.
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= MOST PLAYED ================= -->
+
+<div class="section most-played">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-6">
+
+                <div class="section-heading">
+
+                    <h6>
+                        محصولات برتر
+                    </h6>
+
+                    <h2>
+                        محبوب‌ترین محصولات
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="main-button">
+
+                    <a href="/">
+                        مشاهده همه
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            {% for product in top_products %}
+
+            <div class="col-lg-2 col-md-6 col-sm-6">
+
+                <div class="item">
+
+                    <div class="thumb">
+
+                        {% if product.image %}
+
+                        <a href="/">
+
+                            <img src="{{ product.image.url }}"
+                                 alt="{{ product.title }}">
+
+                        </a>
+
+                        {% endif %}
+
+                    </div>
+
+
+                    <div class="down-content">
+
+                        <span class="category">
+
+                            {{ product.Category }}
+
+                        </span>
+
+                        <h4>
+
+                            {{ product.title }}
+
+                        </h4>
+
+                        <a href="/">
+                            مشاهده
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="col-12 text-center">
+
+                <p>
+                    هنوز محصولی ثبت نشده است.
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<div class="section categories">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12 text-center">
+
+                <div class="section-heading">
+
+                    <h6>
+                        دسته بندی ها
+                    </h6>
+
+                    <h2>
+                        دسته بندی محصولات
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- دسته بندی‌های موجود در محصولات -->
+
+            {% regroup products by Category as categories %}
+
+            {% for category in categories|slice:":5" %}
+
+            <div class="col-lg col-sm-6 col-xs-12">
+
+                <div class="item">
+
+                    <h4>
+                        {{ category.grouper }}
+                    </h4>
+
+                    <div class="thumb">
+
+                        {% with category.list.0 as category_product %}
+
+                            {% if category_product.image %}
+
+                            <a href="/">
+
+                                <img src="{{ category_product.image.url }}"
+                                     alt="{{ category.grouper }}">
+
+                            </a>
+
+                            {% endif %}
+
+                        {% endwith %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CTA ================= -->
+
+<div class="section cta">
+
+    <div class="container">
+
+        <div class="row">
+
+
+            <div class="col-lg-5">
+
+                <div class="shop">
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+
+                            <div class="section-heading">
+
+                                <h6>
+                                    فروشگاه
+                                </h6>
+
+                                <h2>
+                                    محصولات مورد علاقه خود را با
+                                    <em>بهترین قیمت</em>
+                                    خریداری کنید!
+                                </h2>
+
+                            </div>
+
+
+                            <p>
+                                جدیدترین محصولات را با قیمت مناسب از فروشگاه ما تهیه کنید.
+                            </p>
+
+
+                            <div class="main-button">
+
+                                <a href="/">
+                                    خرید
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-5 offset-lg-2 align-self-end">
+
+                <div class="subscribe">
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+
+                            <div class="section-heading">
+
+                                <h6>
+                                    خبرنامه
+                                </h6>
+
+                                <h2>
+                                    برای دریافت آخرین اخبار
+                                    <em>عضو خبرنامه</em>
+                                    شوید!
+                                </h2>
+
+                            </div>
+
+
+                            <div class="search-input">
+
+                                <form id="subscribe"
+                                      action="#"
+                                      method="POST">
+
+                                    {% csrf_token %}
+
+                                    <input type="email"
+                                           class="form-control"
+                                           id="exampleInputEmail1"
+                                           name="email"
+                                           placeholder="ایمیل شما...">
+
+                                    <button type="submit">
+                                        عضویت
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="col-lg-12">
+
+            <p>
+
+                کلیه حقوق محفوظ است.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="{% static 'vendor/jquery/jquery.min.js' %}">
+</script>
+
+<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}">
+</script>
+
+<script src="{% static 'assets/js/isotope.min.js' %}">
+</script>
+
+<script src="{% static 'assets/js/owl-carousel.js' %}">
+</script>
+
+<script src="{% static 'assets/js/counter.js' %}">
+</script>
+
+<script src="{% static 'assets/js/custom.js' %}">
+</script>
+
+</body>
+
+</html>
