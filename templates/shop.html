@@ -1,135 +1,255 @@
+
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
-  <head>
-
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>قالب HTML Lugx - جزئیات محصول</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <title>فروشگاه</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
-https://persian-theme.com
-
--->
-  </head>
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-lugx-gaming.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fonts.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+</head>
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
+<!-- Preloader -->
+<div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        <span class="dot"></span>
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
+</div>
 
-   <!-- ***** Header Area Start ***** -->
-   <header class="header-area header-sticky">
+<!-- Header -->
+<header class="header-area header-sticky">
     <div class="container">
         <div class="row">
             <div class="col-12">
+
                 <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="" style="width: 158px;">
+
+                    <!-- Logo -->
+                    <a href="{% url 'index' %}" class="logo">
+                        <img src="{% static 'assets/images/logo.png' %}"
+                             alt=""
+                             style="width: 158px;">
                     </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
+
+                    <!-- Menu -->
                     <ul class="nav">
-                      <li><a href="index.html">خانه</a></li>
-                      <li><a href="shop.html" class="active">فروشگاه</a></li>
-                      <li><a href="product-details.html">جزئیات محصول</a></li>
-                      <li><a href="contact.html">تماس با ما</a></li>
-                      <li><a href="#">ورود</a></li>
-                  </ul>   
-                    <a class='menu-trigger'>
+
+                        <li>
+                            <a href="{% url 'index' %}">
+                                خانه
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'products' %}" class="active">
+                                فروشگاه
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                جزئیات محصول
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                تماس با ما
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                ورود
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <a class="menu-trigger">
                         <span>منو</span>
                     </a>
-                    <!-- ***** Menu End ***** -->
+
                 </nav>
+
             </div>
         </div>
     </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+</header>
 
-  <div class="page-heading header-text">
+<!-- Page Heading -->
+<div class="page-heading header-text">
     <div class="container">
-      <div class="row">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <h3>فروشگاه</h3>
+
+                <span class="breadcrumb">
+                    <a href="{% url 'index' %}">خانه</a>
+                    > فروشگاه
+                </span>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Products -->
+<div class="section trending">
+
+    <div class="container">
+
+        <!-- Filters -->
+        <ul class="trending-filter">
+
+            <li>
+                <a class="is_active" href="#!" data-filter="*">
+                    مشاهده همه
+                </a>
+            </li>
+
+            <li>
+                <a href="#!" data-filter=".adv">
+                    ماجراجویی
+                </a>
+            </li>
+
+            <li>
+                <a href="#!" data-filter=".str">
+                    استراتژی
+                </a>
+            </li>
+
+            <li>
+                <a href="#!" data-filter=".rac">
+                    مسابقه
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- Products Grid -->
+        <div class="row trending-box">
+
+            {% for item in products %}
+
+                <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items">
+
+                    <div class="item">
+
+                        <!-- Image -->
+                        <div class="thumb">
+
+                            <a href="#">
+
+                                {% if item.image %}
+                                    <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                                {% else %}
+                                    <img src="{% static 'assets/images/trending-02.jpg' %}"
+                                         alt="{{ item.title }}">
+                                {% endif %}
+
+                            </a>
+
+                            <!-- Price -->
+                            <span class="price">
+
+                                {% if item.discount_price %}
+                                    <em>{{ item.price }}</em>
+                                    {{ item.discount_price }}
+                                {% else %}
+                                    {{ item.price }}
+                                {% endif %}
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- Product Info -->
+                        <div class="down-content">
+
+                            <span class="category">
+                                {{ item.category }}
+                            </span>
+
+                            <h4>
+                                {{ item.title }}
+                            </h4>
+
+                            <a href="#">
+                                <i class="fa fa-shopping-bag"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% empty %}
+
+                <div class="col-12 text-center">
+                    <p>محصولی برای نمایش وجود ندارد.</p>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
         <div class="col-lg-12">
-          <h3>فروشگاه</h3>
-          <span class="breadcrumb"><a href="#">خانه</a> > فروشگاه</span>
+
+            <p>
+                کلیه حقوق محفوظ است.
+            </p>
+
         </div>
-      </div>
     </div>
-  </div>
+</footer>
 
-  <div class="section trending">
-    <div class="container">
-      <ul class="trending-filter">
-        <li>
-          <a class="is_active" href="#!" data-filter="*">مشاهده همه</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".adv">ماجراجویی</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".str">استراتژی</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".rac">مسابقه</a>
-        </li>
-      </ul>
-      {% for item in products  %}
-    <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 str">
-          <div class="item">
-            <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/trending-02.jpg" alt=""></a>
-              <span class="price"><em>{{item.price}}</em>{{item.discount_price}}</span>
-            </div>
-            <div class="down-content">
-              <span class="category">{{item.category}}</span>
-              <h4> {item.title}</h4>
-              <a href="product-details.html"><i class="fa fa-shopping-bag"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-{% endfor %}
-  <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>کلیه حقوق محفوظ است. &nbsp;&nbsp; <a rel="nofollow" href="https://persian-theme.com" target="_blank">طراحی: پرشین تم</a></p>
-      </div>
-    </div>
-  </footer>
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+<!-- Scripts -->
 
-  </body>
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/isotope.min.js' %}"></script>
+<script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+<script src="{% static 'assets/js/counter.js' %}"></script>
+<script src="{% static 'assets/js/custom.js' %}"></script>
+
+</body>
 </html>
+
