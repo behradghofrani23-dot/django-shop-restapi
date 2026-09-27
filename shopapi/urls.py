@@ -31,4 +31,5 @@ urlpatterns = [
         views.login_view,
         name="login"
     ),
+    path("products/", include("products.urls")),
 ]
