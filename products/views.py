@@ -9,7 +9,7 @@ class ProductListAPIView(APIView):
         serializer=ProductSerializer(products,many=True)
         return Response(serializer.data,status=200)
 class ProductAPIView(APIView):
-    def get(self,request,slug):
-        product=Product.objects.get(slug=slug)
+    def get(self,request,id):
+        product=Product.objects.order_by("id")[:id]
         serializer=ProductSerializer(product)
         return Response(serializer.data,status=True)
