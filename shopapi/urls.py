@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from core import views
+from accounts.views import SignupAPIView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),      
@@ -32,4 +33,5 @@ urlpatterns = [
         name="login"
     ),
     path("products/", include("products.urls")),
+     path('register/', SignupAPIView.as_view()),
 ]
