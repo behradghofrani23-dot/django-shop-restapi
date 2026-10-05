@@ -30,4 +30,21 @@ class SignupAPIView(APIView):
             )
 
         return Response(serializer.errors, status=400)
+class LoginApiView(APIView):
+    def post(self,request):
+        serializer=LoginSerializer(data=request.data)
+        if serializer.is_valid():
+            return Response(
+                {
+                    "message":"login was successfully",
+                    "access":serializer.validated_data['access'],
+                    "refresh":serializer.validated_data['refresh'],
+                    "user":{
+                        "id":serializer.validated_data["user"].id,
+                        "username":serializer.validated_data['user'].username,
+                    }
+                },
+                status=200
+            )
+        return Response(serializer.errors,status=400)
         
