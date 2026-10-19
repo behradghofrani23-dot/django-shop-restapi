@@ -2,23 +2,16 @@ from rest_framework import serializers
 from .models import CustomUser
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate
-class SignupSerializer(serializers.ModelSerializer):
+from django.contrib.auth.models import User
+class aasdasd(serializers.ModelSerializer):
     password=serializers.CharField(write_only=True)
     class Meta:
-        model = CustomUser
-        fields = [
-            "username",
-            "first_name",
-            "last_name",
-            "email",
-            "phone",
-            "password",
-        ]
-
+        model=User
+        fields="__all__"
     def create(self, validated_data):
-        user = CustomUser.objects.create_user(**validated_data)
-
-        return user
+        user=CustomUser.objects.create_user(**self.validated_data)
+        
+        return user 
 class LoginSerializer(serializers.Serializer):
     username=serializers.CharField()
     password=serializers.CharField(write_only=True)
